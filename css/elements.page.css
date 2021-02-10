@@ -4,9 +4,8 @@
     Default markup for page level elements
 */
 
-html {
+html {}
 
-}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -15,10 +14,6 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
+::-moz-selection {}
 
-}
-
-::selection {
-
-}
+::selection {}
