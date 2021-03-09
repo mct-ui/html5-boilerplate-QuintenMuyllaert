@@ -10,6 +10,7 @@ html {
     font-size: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #111;
     padding: 24px 24px 0;
+    scroll-behavior: smooth;
 }
 
 
@@ -85,12 +86,45 @@ figure {
     margin: 0 0 24px;
 }
 
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+th {
+    text-align: left;
+}
+
+th,
+td {
+    padding: 4px 8px;
+    border-bottom: 1px solid gainsboro;
+}
+
+
+/*Hier is toch een css selector voor om niet met klasses te moeten werken?*/
+
+.odd {
+    background-color: whitesmoke;
+}
+
 ul,
-ol,
-blockquote {}
+ol {
+    padding-left: 24px;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+    font-family: "Times New Roman", serif;
+}
 
 li ul,
-li ol {}
+li ol {
+    margin-bottom: 0;
+}
 
 blockquote * {
     font-size: inherit;
@@ -104,12 +138,66 @@ figcaption {
     color: gray;
 }
 
-hr {}
+hr {
+    border: 0;
+    height: 1px;
+    background: lightgray;
+    margin: 0 0 24px;
+}
 
-a {}
+a {
+    color: royalblue;
+    transition: all .1s ease-in-out;
+}
 
 a:hover,
-a:focus {}
+a:focus {
+    color: crimson;
+}
 
 a:visited,
-a:active {}
+a:active {
+    color: blueviolet;
+}
+
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    Modify as content requires.
+*/
+
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    html {
+        padding: 48px 48px 24px;
+    }
+    h1 {
+        font-size: 58px;
+        line-height: 64px;
+    }
+}
+
+
+/* Large devices (landscape tablets, desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
